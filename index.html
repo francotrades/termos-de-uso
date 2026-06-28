@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso | FrancoTrades</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --bg-deep:   #06080d;
+            --bg-card:   #0b1020;
+            --bg-mid:    #0e1428;
+            --cyan:      #3af0ff;
+            --blue:      #5b9fff;
+            --white:     #eaf4ff;
+            --muted:     #5a7aa0;
+            --border:    rgba(58,240,255,0.13);
+            --glow-cyan: 0 0 28px rgba(58,240,255,0.45);
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-deep);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ─── NAVBAR ─────────────────────────────── */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background: rgba(6,8,13,0.94);
+            backdrop-filter: blur(16px);
+            z-index: 1000;
+            padding: 14px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .navbar .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 19px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--white);
+            text-decoration: none;
+        }
+        .navbar .logo span { color: var(--cyan); }
+        .back-link {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: var(--cyan); }
+
+        /* ─── HERO ───────────────────────────────── */
+        .page-hero {
+            padding: 140px 20px 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
+            pointer-events: none;
+        }
+        .page-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 60%; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+        .hero-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 10px;
+            letter-spacing: 5px;
+            color: var(--cyan);
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            opacity: 0.75;
+        }
+        .page-hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(28px, 5vw, 52px);
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 16px;
+            line-height: 1.1;
+        }
+        .page-hero h1 span { color: var(--cyan); }
+        .page-hero p {
+            font-size: 15px;
+            color: var(--muted);
+            max-width: 540px;
+            margin: 0 auto;
+        }
+        .neon-line {
+            width: 50px; height: 1px;
+            background: linear-gradient(90deg, var(--cyan), var(--blue));
+            margin: 20px auto;
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* ─── MAIN CONTENT ───────────────────────── */
+        .content-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 70px 24px 100px;
+        }
+
+        /* Índice */
+        .index-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--cyan);
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin-bottom: 60px;
+        }
+        .index-box h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--cyan);
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+        .index-box ol {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            counter-reset: idx;
+        }
+        .index-box ol li { counter-increment: idx; }
+        .index-box ol li a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: color 0.2s;
+        }
+        .index-box ol li a::before {
+            content: counter(idx, decimal-leading-zero);
+            font-family: 'Orbitron', monospace;
+            font-size: 10px;
+            color: rgba(58,240,255,0.4);
+            flex-shrink: 0;
+        }
+        .index-box ol li a:hover { color: var(--white); }
+        .index-box ol li a:hover::before { color: var(--cyan); }
+
+        /* Seções */
+        .term-section {
+            margin-bottom: 52px;
+            scroll-margin-top: 90px;
+        }
+        .term-section h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(14px, 2.5vw, 18px);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .term-section h2 .sec-num {
+            font-size: 10px;
+            color: var(--cyan);
+            letter-spacing: 2px;
+            opacity: 0.7;
+            flex-shrink: 0;
+        }
+        .term-section p {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+        .term-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 14px 0;
+            padding-left: 4px;
+        }
+        .term-section ul li {
+            font-size: 15px;
+            color: var(--muted);
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.7;
+        }
+        .term-section ul li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .term-section strong { color: var(--white); font-weight: 600; }
+
+        /* Divider entre seções */
+        .term-divider {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+            margin: 0 0 52px;
+        }
+
+        /* Destaque importante */
+        .highlight-box {
+            background: rgba(58,240,255,0.04);
+            border: 1px solid rgba(58,240,255,0.15);
+            border-radius: 6px;
+            padding: 18px 22px;
+            margin: 16px 0;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+        .highlight-box strong { color: var(--cyan); }
+
+        /* Footer da página */
+        .terms-footer {
+            background: var(--bg-mid);
+            border-top: 1px solid var(--border);
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .terms-footer p {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+        .terms-footer .update-date {
+            font-family: 'Orbitron', monospace;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: rgba(58,240,255,0.4);
+            margin-top: 12px;
+        }
+        .terms-footer .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .terms-footer .contact-row a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+        .terms-footer .contact-row a:hover { opacity: 0.75; }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            padding: 14px 32px;
+            background: transparent;
+            border: 1px solid rgba(58,240,255,0.3);
+            border-radius: 6px;
+            color: var(--cyan);
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .back-btn:hover {
+            background: rgba(58,240,255,0.08);
+            box-shadow: var(--glow-cyan);
+        }
+
+        /* WhatsApp float */
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px;
+            background: #25D366; width: 58px; height: 58px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; color: white !important; text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            z-index: 9999; pointer-events: auto;
+            transition: all 0.3s;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); background: #20b358; }
+
+        /* ─── RESPONSIVE ─────────────────────────── */
+        @media (max-width: 600px) {
+            .page-hero { padding: 120px 18px 50px; }
+            .content-wrap { padding: 50px 18px 80px; }
+            .index-box { padding: 22px 20px; }
+            .term-section h2 { font-size: 14px; }
+            .terms-footer .contact-row { flex-direction: column; align-items: center; gap: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href="https://francotrades.github.io/mentoria-individual/" class="logo">Franco<span>Trades</span></a>
+    <a href="https://francotrades.github.io/mentoria-individual/" class="back-link">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+    <div class="hero-label">● Documentação Legal</div>
+    <h1>Termos de <span>Uso</span></h1>
+    <div class="neon-line"></div>
+    <p>Leia com atenção antes de adquirir qualquer produto ou serviço da FrancoTrades.</p>
+</div>
+
+<!-- CONTEÚDO -->
+<div class="content-wrap">
+
+    <!-- Índice -->
+    <div class="index-box">
+        <h3>Índice</h3>
+        <ol>
+            <li><a href="#s1">Identificação e Aceitação dos Termos</a></li>
+            <li><a href="#s2">Acesso ao Conteúdo</a></li>
+            <li><a href="#s3">Direito de Arrependimento e Política de Reembolso</a></li>
+            <li><a href="#s4">Natureza do Conteúdo e Responsabilidade</a></li>
+            <li><a href="#s5">Direitos de Propriedade Intelectual</a></li>
+            <li><a href="#s6">Conduta do Usuário</a></li>
+            <li><a href="#s7">Privacidade e Proteção de Dados (LGPD)</a></li>
+            <li><a href="#s8">Alterações nos Termos de Uso</a></li>
+            <li><a href="#s9">Legislação Aplicável e Foro</a></li>
+            <li><a href="#s10">Disposições Gerais</a></li>
+            <li><a href="#s11">Dúvidas e Suporte</a></li>
+        </ol>
+    </div>
+
+    <!-- 1 -->
+    <div class="term-section" id="s1">
+        <h2><span class="sec-num">01</span> Identificação e Aceitação dos Termos</h2>
+        <p>Estes Termos de Uso regulam o acesso e a utilização dos produtos e serviços oferecidos pela <strong>FrancoTrades</strong>, empresa registrada nos Estados Unidos da América, operada por Gustavo Franco.</p>
+        <p>Para consumidores residentes no Brasil, aplicam-se adicionalmente as disposições do <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong>, da <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD)</strong> e demais normas brasileiras aplicáveis, prevalecendo sempre a legislação mais favorável ao consumidor.</p>
+        <p>Ao adquirir qualquer produto, acessar o site ou utilizar qualquer serviço da FrancoTrades, você declara ter lido, compreendido e concordado integralmente com estes termos. Caso não concorde, não prossiga com a compra ou utilização dos serviços.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 2 -->
+    <div class="term-section" id="s2">
+        <h2><span class="sec-num">02</span> Acesso ao Conteúdo</h2>
+        <p>Os cursos e mentorias são disponibilizados em formato digital, com acesso online pelo prazo definido no momento da compra. Os prazos vigentes são:</p>
+        <ul>
+            <li><strong>Mentoria Liberdade Trader:</strong> 180 dias de acesso a partir da data da compra.</li>
+            <li><strong>Mentoria Individual:</strong> 365 dias de acesso a partir da data da compra.</li>
+        </ul>
+        <p>Ao término do prazo contratado, o acesso ao conteúdo será encerrado automaticamente. Para renovar o acesso, será necessário realizar uma nova aquisição.</p>
+        <div class="highlight-box">
+            O valor pago refere-se à disponibilização do conteúdo pelo período contratado. Salvo no exercício do direito de arrependimento previsto na Seção 3, <strong>não há ressarcimento pelo não uso da plataforma</strong> após o início do acesso ao conteúdo. Recomendamos que o acesso seja iniciado o quanto antes após a compra.
+        </div>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 3 -->
+    <div class="term-section" id="s3">
+        <h2><span class="sec-num">03</span> Direito de Arrependimento e Política de Reembolso</h2>
+
+        <p style="color:var(--white);font-weight:600;margin-bottom:8px;">3.1 Direito de Arrependimento (Consumidores Brasileiros)</p>
+        <p>Em conformidade com o <strong>artigo 49 do Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong>, o consumidor que adquirir produtos ou serviços pela internet tem o direito de desistir do contrato no prazo de <strong>7 (sete) dias corridos</strong>, contados da data da compra ou do início do acesso ao serviço, sem necessidade de justificativa.</p>
+        <div class="highlight-box">
+            <strong>Exercício do direito de arrependimento:</strong> o reembolso, nesse caso, será <strong>integral</strong>, sem qualquer desconto ou taxa, incluindo eventuais encargos pagos. A solicitação deve ser feita pelo e-mail <strong>francotradesusa@gmail.com</strong> dentro do prazo de 7 dias corridos a partir da data da compra.
+        </div>
+
+        <p style="color:var(--white);font-weight:600;margin-top:24px;margin-bottom:8px;">3.2 Cancelamento Após o Prazo de Arrependimento</p>
+        <p>Após o prazo de 7 dias corridos, não haverá direito a reembolso, salvo nas hipóteses previstas em lei, como vício ou descumprimento de oferta por parte da FrancoTrades.</p>
+        <p>Caso o conteúdo apresente defeito técnico comprovado que impeça seu acesso, o consumidor deverá comunicar o problema pelo e-mail de suporte para que seja sanado em até <strong>30 dias</strong>, conforme o artigo 26 do CDC. Não sendo possível a solução, o consumidor poderá optar pelo reembolso proporcional ou pela substituição do produto.</p>
+
+        <p style="color:var(--white);font-weight:600;margin-top:24px;margin-bottom:8px;">3.3 Prazo para Devolução dos Valores</p>
+        <p>O prazo para restituição dos valores depende do meio de pagamento utilizado:</p>
+        <ul>
+            <li><strong>Cartão de crédito:</strong> o estorno será solicitado à operadora em até 5 dias úteis após a confirmação do cancelamento. O crédito poderá aparecer na fatura em até 2 ciclos de cobrança, conforme as regras da operadora.</li>
+            <li><strong>PIX:</strong> a devolução será processada em até 5 dias úteis após a confirmação do cancelamento, diretamente na chave PIX utilizada na compra.</li>
+            <li><strong>Outros meios:</strong> o prazo seguirá as regras da plataforma de pagamento utilizada, podendo haver incidência de taxas operacionais cobradas pela própria plataforma — nunca pela FrancoTrades.</li>
+        </ul>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 4 -->
+    <div class="term-section" id="s4">
+        <h2><span class="sec-num">04</span> Natureza do Conteúdo e Responsabilidade</h2>
+        <p>Todo o conteúdo oferecido pela FrancoTrades tem <strong>caráter exclusivamente educacional e informativo</strong>. Nenhum conteúdo constitui recomendação de investimento, consultoria financeira, gestão de recursos de terceiros ou qualquer atividade regulada pela Comissão de Valores Mobiliários (CVM) ou pelo Banco Central do Brasil.</p>
+        <p>As estratégias e metodologias ensinadas são baseadas na experiência e nos resultados pessoais de Gustavo Franco. <strong>Resultados passados não garantem resultados futuros.</strong> O desempenho de cada aluno depende de fatores individuais como disciplina, capital disponível, contexto de mercado e aplicação do conteúdo aprendido.</p>
+        <div class="highlight-box">
+            O mercado financeiro envolve riscos significativos de perda de capital. Ao adquirir qualquer produto da FrancoTrades, você reconhece expressamente que:<br><br>
+            <strong>(a)</strong> todas as decisões de investimento são de sua exclusiva responsabilidade;<br>
+            <strong>(b)</strong> você deve avaliar seu perfil de risco antes de operar no mercado;<br>
+            <strong>(c)</strong> a FrancoTrades, Gustavo Franco e quaisquer colaboradores ou empresas associadas não se responsabilizam por perdas financeiras, resultados individuais ou decisões tomadas com base no conteúdo disponibilizado.
+        </div>
+        <p>A limitação de responsabilidade prevista nesta cláusula não afasta direitos assegurados ao consumidor pela legislação brasileira, incluindo o CDC.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 5 -->
+    <div class="term-section" id="s5">
+        <h2><span class="sec-num">05</span> Direitos de Propriedade Intelectual</h2>
+        <p>Todo o conteúdo disponibilizado pela FrancoTrades é protegido pela <strong>Lei nº 9.610/1998 (Lei de Direitos Autorais)</strong> e demais normas de propriedade intelectual aplicáveis. O acesso ao conteúdo é concedido ao aluno de forma <strong>pessoal, intransferível e limitada</strong> ao período contratado, exclusivamente para fins educacionais próprios.</p>
+        <p>É expressamente proibido, sem autorização prévia e por escrito da FrancoTrades:</p>
+        <ul>
+            <li>Copiar, reproduzir, transcrever ou adaptar qualquer parte do conteúdo</li>
+            <li>Distribuir, compartilhar ou ceder o acesso a terceiros</li>
+            <li>Gravar, capturar tela ou redistribuir aulas ao vivo ou gravadas</li>
+            <li>Utilizar o conteúdo para fins comerciais, em outros cursos ou produtos</li>
+        </ul>
+        <p>O descumprimento sujeita o infrator às penalidades previstas na legislação brasileira e americana de direitos autorais, além do cancelamento imediato do acesso sem direito a reembolso.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 6 -->
+    <div class="term-section" id="s6">
+        <h2><span class="sec-num">06</span> Conduta do Usuário</h2>
+        <p>Ao utilizar os serviços da FrancoTrades, o usuário compromete-se a:</p>
+        <ul>
+            <li>Manter suas credenciais de acesso em sigilo e não compartilhá-las com terceiros</li>
+            <li>Utilizar o conteúdo exclusivamente para fins pessoais e educacionais</li>
+            <li>Não praticar qualquer ato que possa comprometer a segurança ou o funcionamento da plataforma</li>
+            <li>Respeitar os demais participantes em ambientes de comunidade ou grupos</li>
+            <li>Não utilizar o ambiente da FrancoTrades para divulgar informações falsas, enganosas ou prejudiciais a outros usuários</li>
+        </ul>
+        <p>O descumprimento pode resultar no cancelamento imediato do acesso. Nesse caso, o reembolso será avaliado conforme o enquadramento legal aplicável.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 7 -->
+    <div class="term-section" id="s7">
+        <h2><span class="sec-num">07</span> Privacidade e Proteção de Dados (LGPD)</h2>
+        <p>A FrancoTrades trata os dados pessoais dos usuários em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD)</strong>. Os dados coletados durante a compra e utilização dos serviços são utilizados exclusivamente para:</p>
+        <ul>
+            <li>Processamento e gestão do acesso aos produtos adquiridos</li>
+            <li>Comunicações relacionadas ao serviço contratado</li>
+            <li>Cumprimento de obrigações legais</li>
+        </ul>
+        <p>Seus dados não serão vendidos ou compartilhados com terceiros para fins comerciais sem seu consentimento expresso. Você tem o direito de solicitar acesso, correção, eliminação ou portabilidade dos seus dados a qualquer momento pelo e-mail <strong>francotradesusa@gmail.com</strong>.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 8 -->
+    <div class="term-section" id="s8">
+        <h2><span class="sec-num">08</span> Alterações nos Termos de Uso</h2>
+        <p>A FrancoTrades reserva-se o direito de atualizar ou modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor a partir da data de publicação nesta página.</p>
+        <p>Em caso de alterações relevantes que afetem direitos do consumidor, nos comprometemos a comunicar os usuários com acesso ativo pelo e-mail cadastrado, com antecedência mínima de 10 dias. O uso contínuo dos serviços após a comunicação implica na <strong>aceitação das novas condições</strong>.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 9 -->
+    <div class="term-section" id="s9">
+        <h2><span class="sec-num">09</span> Legislação Aplicável e Foro</h2>
+        <p>Estes Termos de Uso são regidos pelas leis da <strong>República Federativa do Brasil</strong>. Para a resolução de eventuais disputas decorrentes deste acordo, fica eleito o foro da <strong>comarca do domicílio do consumidor</strong>, conforme o artigo 101, inciso I, do Código de Defesa do Consumidor (Lei nº 8.078/1990), renunciando-se a qualquer outro, por mais privilegiado que seja.</p>
+        <p>Como alternativa ao Poder Judiciário, o consumidor pode buscar a resolução de conflitos pelos seguintes canais:</p>
+        <div class="highlight-box">
+            <strong>Procon:</strong> órgão estadual de defesa do consumidor da sua cidade ou estado<br>
+            <strong>consumidor.gov.br:</strong> plataforma online de resolução de conflitos do Ministério da Justiça<br>
+            <strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados, para questões relacionadas à LGPD
+        </div>
+        <p>A eleição do foro brasileiro não impede que a FrancoTrades, quando na posição de autora, acione tribunais de outras jurisdições para proteção de seus direitos de propriedade intelectual ou recuperação de créditos.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 10 -->
+    <div class="term-section" id="s10">
+        <h2><span class="sec-num">10</span> Disposições Gerais</h2>
+        <p>Se qualquer cláusula destes Termos de Uso for considerada inválida ou inaplicável por qualquer autoridade competente, as demais cláusulas permanecerão em pleno vigor e efeito.</p>
+        <p>A tolerância de qualquer descumprimento destes termos não constitui renúncia ao direito de exigi-los no futuro. Estes Termos constituem o acordo integral entre as partes em relação ao seu objeto, substituindo quaisquer entendimentos anteriores.</p>
+    </div>
+    <hr class="term-divider">
+
+    <!-- 11 -->
+    <div class="term-section" id="s11">
+        <h2><span class="sec-num">11</span> Dúvidas e Suporte</h2>
+        <p>Para dúvidas sobre estes Termos, exercício do direito de arrependimento, solicitações relativas à LGPD ou qualquer necessidade de suporte, entre em contato pelos canais abaixo. O atendimento é realizado em horário comercial (horário de Brasília).</p>
+        <div class="highlight-box">
+            <strong>E-mail:</strong> francotradesusa@gmail.com<br>
+            <strong>WhatsApp:</strong> +55 22 981448874
+        </div>
+        <p>Para exercer o direito de arrependimento ou solicitar cancelamento, informe: nome completo, produto adquirido, data da compra e meio de pagamento utilizado. O prazo de resposta é de até 2 dias úteis.</p>
+    </div>
+
+<!-- FOOTER -->
+<div class="terms-footer">
+    <p>© 2025 FrancoTrades. Todos os direitos reservados.</p>
+    <div class="contact-row">
+        <a href="mailto:francotradesusa@gmail.com"><i class="fas fa-envelope"></i> francotradesusa@gmail.com</a>
+        <a href="https://wa.me/5522981448874"><i class="fab fa-whatsapp"></i> +55 22 981448874</a>
+    </div>
+    <a href="https://francotrades.github.io/mentoria-individual/" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar para a Mentoria
+    </a>
+    <div class="update-date">Última atualização: Junho 2026 · v3.0 · Adequado ao CDC e LGPD</div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5522981448874?text=Ol%C3%A1%20Gustavo!%20Tenho%20uma%20d%C3%BAvida%20sobre%20os%20Termos%20de%20Uso." class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// Smooth scroll para o índice
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+    });
+});
+</script>
+</body>
+</html>
