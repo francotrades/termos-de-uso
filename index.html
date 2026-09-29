@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Termos de Uso | FrancoTrades</title>
+    <meta name="description" content="Termos de Uso da FrancoTrades para mentorias, conteúdos digitais e serviços educacionais.">
+    <meta name="theme-color" content="#06080d">
+    <link rel="icon" type="image/svg+xml" href="https://francotrades.github.io/mentoria-individual/assets/francotrades-ft.svg">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
             --bg-deep:   #06080d;
-            --bg-card:   #0b1020;
-            --bg-mid:    #0e1428;
-            --cyan:      #3af0ff;
-            --blue:      #5b9fff;
-            --white:     #eaf4ff;
-            --muted:     #5a7aa0;
-            --border:    rgba(58,240,255,0.13);
-            --glow-cyan: 0 0 28px rgba(58,240,255,0.45);
+            --bg-card:   #0c110e;
+            --bg-mid:    #101713;
+            --cyan:      #43e290;
+            --blue:      #25c978;
+            --white:     #f5f7f6;
+            --muted:     #8f9a94;
+            --border:    rgba(67,226,144,0.15);
+            --glow-cyan: 0 0 28px rgba(67,226,144,0.45);
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background: var(--bg-deep);
+            background:
+                radial-gradient(circle at 50% 0%, rgba(67,226,144,.055), transparent 34%),
+                var(--bg-deep);
             color: var(--white);
             line-height: 1.7;
             overflow-x: hidden;
@@ -127,7 +132,7 @@
 
         /* Índice */
         .index-box {
-            background: var(--bg-card);
+            background: linear-gradient(180deg, rgba(67,226,144,.035), transparent 34%), var(--bg-card);
             border: 1px solid var(--border);
             border-left: 3px solid var(--cyan);
             border-radius: 8px;
@@ -163,7 +168,7 @@
             content: counter(idx, decimal-leading-zero);
             font-family: 'Orbitron', monospace;
             font-size: 10px;
-            color: rgba(58,240,255,0.4);
+            color: rgba(67,226,144,0.4);
             flex-shrink: 0;
         }
         .index-box ol li a:hover { color: var(--white); }
@@ -171,8 +176,12 @@
 
         /* Seções */
         .term-section {
-            margin-bottom: 52px;
+            margin-bottom: 30px;
             scroll-margin-top: 90px;
+            background: rgba(12,17,14,.72);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px 30px 24px;
         }
         .term-section h2 {
             font-family: 'Orbitron', monospace;
@@ -224,16 +233,13 @@
 
         /* Divider entre seções */
         .term-divider {
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, var(--border), transparent);
-            margin: 0 0 52px;
+            display: none;
         }
 
         /* Destaque importante */
         .highlight-box {
-            background: rgba(58,240,255,0.04);
-            border: 1px solid rgba(58,240,255,0.15);
+            background: rgba(67,226,144,0.04);
+            border: 1px solid rgba(67,226,144,0.15);
             border-radius: 6px;
             padding: 18px 22px;
             margin: 16px 0;
@@ -259,7 +265,7 @@
             font-family: 'Orbitron', monospace;
             font-size: 10px;
             letter-spacing: 2px;
-            color: rgba(58,240,255,0.4);
+            color: rgba(67,226,144,0.4);
             margin-top: 12px;
         }
         .terms-footer .contact-row {
@@ -287,7 +293,7 @@
             margin-top: 24px;
             padding: 14px 32px;
             background: transparent;
-            border: 1px solid rgba(58,240,255,0.3);
+            border: 1px solid rgba(67,226,144,0.3);
             border-radius: 6px;
             color: var(--cyan);
             font-family: 'Orbitron', monospace;
@@ -301,7 +307,7 @@
             touch-action: manipulation;
         }
         .back-btn:hover {
-            background: rgba(58,240,255,0.08);
+            background: rgba(67,226,144,0.08);
             box-shadow: var(--glow-cyan);
         }
 
@@ -324,6 +330,7 @@
             .page-hero { padding: 120px 18px 50px; }
             .content-wrap { padding: 50px 18px 80px; }
             .index-box { padding: 22px 20px; }
+            .term-section { padding: 24px 20px 20px; }
             .term-section h2 { font-size: 14px; }
             .terms-footer .contact-row { flex-direction: column; align-items: center; gap: 14px; }
         }
@@ -371,9 +378,9 @@
     <!-- 1 -->
     <div class="term-section" id="s1">
         <h2><span class="sec-num">01</span> Identificação e Aceitação dos Termos</h2>
-        <p>Estes Termos de Uso regulam o acesso e a utilização dos produtos e serviços oferecidos pela <strong>FrancoTrades</strong>, empresa registrada nos Estados Unidos da América, operada por Gustavo Franco.</p>
-        <p>Para consumidores residentes no Brasil, aplicam-se adicionalmente as disposições do <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong>, da <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD)</strong> e demais normas brasileiras aplicáveis, prevalecendo sempre a legislação mais favorável ao consumidor.</p>
-        <p>Ao adquirir qualquer produto, acessar o site ou utilizar qualquer serviço da FrancoTrades, você declara ter lido, compreendido e concordado integralmente com estes termos. Caso não concorde, não prossiga com a compra ou utilização dos serviços.</p>
+        <p>Estes Termos de Uso regulam o acesso e a utilização dos produtos e serviços oferecidos sob a marca <strong>FrancoTrades</strong>, operada por Gustavo Franco por meio de empresa registrada nos Estados Unidos da América.</p>
+        <p>Nas relações de consumo com residentes no Brasil, aplicam-se as normas brasileiras de proteção ao consumidor e de comércio eletrônico, inclusive o <strong>Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong> e o <strong>Decreto nº 7.962/2013</strong>, além da <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD)</strong>, quando aplicável.</p>
+        <p>Ao concluir a contratação ou utilizar os serviços, você declara que teve oportunidade de ler estes termos. Nenhuma disposição deste documento pretende excluir ou limitar direitos que sejam inderrogáveis pela legislação aplicável.</p>
     </div>
     <hr class="term-divider">
 
@@ -383,9 +390,9 @@
         <p>Os cursos e mentorias são disponibilizados em formato digital, com acesso online pelo prazo definido no momento da compra. Os prazos vigentes são:</p>
         <ul>
             <li><strong>Mentoria Liberdade Trader:</strong> 180 dias de acesso a partir da data da compra.</li>
-            <li><strong>Mentoria Individual:</strong> 365 dias de acesso a partir da data da compra.</li>
+            <li><strong>Mentoria Individual:</strong> 12 sessões individuais, 4 meses de acompanhamento direto e 365 dias de acesso às gravações/área de conteúdo, observadas as condições específicas informadas na oferta e no cadastro do aluno.</li>
         </ul>
-        <p>Ao término do prazo contratado, o acesso ao conteúdo será encerrado automaticamente. Para renovar o acesso, será necessário realizar uma nova aquisição.</p>
+        <p>Ao término do prazo contratado, o acesso ao conteúdo poderá ser encerrado automaticamente. Eventual renovação dependerá de nova contratação ou condição específica disponibilizada pela FrancoTrades.</p>
         <div class="highlight-box">
             O valor pago refere-se à disponibilização do conteúdo pelo período contratado. Salvo no exercício do direito de arrependimento previsto na Seção 3, <strong>não há ressarcimento pelo não uso da plataforma</strong> após o início do acesso ao conteúdo. Recomendamos que o acesso seja iniciado o quanto antes após a compra.
         </div>
@@ -397,21 +404,21 @@
         <h2><span class="sec-num">03</span> Direito de Arrependimento e Política de Reembolso</h2>
 
         <p style="color:var(--white);font-weight:600;margin-bottom:8px;">3.1 Direito de Arrependimento (Consumidores Brasileiros)</p>
-        <p>Em conformidade com o <strong>artigo 49 do Código de Defesa do Consumidor (Lei nº 8.078/1990)</strong>, o consumidor que adquirir produtos ou serviços pela internet tem o direito de desistir do contrato no prazo de <strong>7 (sete) dias corridos</strong>, contados da data da compra ou do início do acesso ao serviço, sem necessidade de justificativa.</p>
+        <p>Em conformidade com o <strong>artigo 49 do Código de Defesa do Consumidor</strong>, nas contratações realizadas fora do estabelecimento comercial, inclusive pela internet, o consumidor poderá exercer o direito de arrependimento no prazo legal de <strong>7 (sete) dias</strong>, contado da assinatura/contratação ou do recebimento do produto ou serviço, conforme a natureza da relação.</p>
         <div class="highlight-box">
-            <strong>Exercício do direito de arrependimento:</strong> o reembolso, nesse caso, será <strong>integral</strong>, sem qualquer desconto ou taxa, incluindo eventuais encargos pagos. A solicitação deve ser feita pelo e-mail <strong>francotradesusa@gmail.com</strong> dentro do prazo de 7 dias corridos a partir da data da compra.
+            <strong>Exercício do direito de arrependimento:</strong> quando aplicável, o reembolso será <strong>integral</strong>, sem multa ou retenção indevida. A solicitação pode ser feita pelo e-mail <strong>francotradesusa@gmail.com</strong>, pelo WhatsApp informado nesta página ou, quando disponível, pela mesma ferramenta utilizada para a contratação. O recebimento da solicitação será confirmado ao consumidor.
         </div>
 
         <p style="color:var(--white);font-weight:600;margin-top:24px;margin-bottom:8px;">3.2 Cancelamento Após o Prazo de Arrependimento</p>
         <p>Após o prazo de 7 dias corridos, não haverá direito a reembolso, salvo nas hipóteses previstas em lei, como vício ou descumprimento de oferta por parte da FrancoTrades.</p>
-        <p>Caso o conteúdo apresente defeito técnico comprovado que impeça seu acesso, o consumidor deverá comunicar o problema pelo e-mail de suporte para que seja sanado em até <strong>30 dias</strong>, conforme o artigo 26 do CDC. Não sendo possível a solução, o consumidor poderá optar pelo reembolso proporcional ou pela substituição do produto.</p>
+        <p>Caso o produto ou serviço apresente vício, falha relevante ou descumprimento da oferta, o consumidor deverá comunicar o problema pelos canais de suporte. Serão observados os prazos, alternativas de saneamento e demais direitos previstos no CDC, inclusive os aplicáveis a vícios de serviços e aos prazos para reclamação, de acordo com a natureza do caso.</p>
 
         <p style="color:var(--white);font-weight:600;margin-top:24px;margin-bottom:8px;">3.3 Prazo para Devolução dos Valores</p>
         <p>O prazo para restituição dos valores depende do meio de pagamento utilizado:</p>
         <ul>
             <li><strong>Cartão de crédito:</strong> o estorno será solicitado à operadora em até 5 dias úteis após a confirmação do cancelamento. O crédito poderá aparecer na fatura em até 2 ciclos de cobrança, conforme as regras da operadora.</li>
             <li><strong>PIX:</strong> a devolução será processada em até 5 dias úteis após a confirmação do cancelamento, diretamente na chave PIX utilizada na compra.</li>
-            <li><strong>Outros meios:</strong> o prazo seguirá as regras da plataforma de pagamento utilizada, podendo haver incidência de taxas operacionais cobradas pela própria plataforma — nunca pela FrancoTrades.</li>
+            <li><strong>Outros meios:</strong> o processamento seguirá também os prazos técnicos da instituição ou plataforma de pagamento. Nos casos de reembolso obrigatório por lei, custos operacionais do meio de pagamento não serão descontados do valor devido ao consumidor.</li>
         </ul>
     </div>
     <hr class="term-divider">
@@ -420,14 +427,14 @@
     <div class="term-section" id="s4">
         <h2><span class="sec-num">04</span> Natureza do Conteúdo e Responsabilidade</h2>
         <p>Todo o conteúdo oferecido pela FrancoTrades tem <strong>caráter exclusivamente educacional e informativo</strong>. Nenhum conteúdo constitui recomendação de investimento, consultoria financeira, gestão de recursos de terceiros ou qualquer atividade regulada pela Comissão de Valores Mobiliários (CVM) ou pelo Banco Central do Brasil.</p>
-        <p>As estratégias e metodologias ensinadas são baseadas na experiência e nos resultados pessoais de Gustavo Franco. <strong>Resultados passados não garantem resultados futuros.</strong> O desempenho de cada aluno depende de fatores individuais como disciplina, capital disponível, contexto de mercado e aplicação do conteúdo aprendido.</p>
+        <p>As estratégias e metodologias ensinadas são baseadas em experiência prática e material educacional. <strong>Resultados passados não garantem resultados futuros</strong>, e não há promessa de rentabilidade, lucro mínimo, aprovação em prop firm ou resultado financeiro específico. O desempenho de cada aluno depende de fatores individuais, capital, gestão de risco, contexto de mercado e aplicação do conteúdo.</p>
         <div class="highlight-box">
             O mercado financeiro envolve riscos significativos de perda de capital. Ao adquirir qualquer produto da FrancoTrades, você reconhece expressamente que:<br><br>
             <strong>(a)</strong> todas as decisões de investimento são de sua exclusiva responsabilidade;<br>
             <strong>(b)</strong> você deve avaliar seu perfil de risco antes de operar no mercado;<br>
             <strong>(c)</strong> a FrancoTrades, Gustavo Franco e quaisquer colaboradores ou empresas associadas não se responsabilizam por perdas financeiras, resultados individuais ou decisões tomadas com base no conteúdo disponibilizado.
         </div>
-        <p>A limitação de responsabilidade prevista nesta cláusula não afasta direitos assegurados ao consumidor pela legislação brasileira, incluindo o CDC.</p>
+        <p>A limitação de responsabilidade prevista nesta cláusula não afasta direitos assegurados ao consumidor pela legislação brasileira. Da mesma forma, a denominação educacional do serviço não afasta eventual enquadramento regulatório que decorra da natureza efetiva de uma atividade, caso ela venha a se enquadrar em serviço sujeito à autorização ou supervisão de órgão competente.</p>
     </div>
     <hr class="term-divider">
 
@@ -442,7 +449,7 @@
             <li>Gravar, capturar tela ou redistribuir aulas ao vivo ou gravadas</li>
             <li>Utilizar o conteúdo para fins comerciais, em outros cursos ou produtos</li>
         </ul>
-        <p>O descumprimento sujeita o infrator às penalidades previstas na legislação brasileira e americana de direitos autorais, além do cancelamento imediato do acesso sem direito a reembolso.</p>
+        <p>O descumprimento poderá resultar em suspensão ou cancelamento do acesso e na adoção das medidas legais cabíveis, observados a gravidade da conduta, a legislação aplicável e os direitos do consumidor que não possam ser afastados contratualmente.</p>
     </div>
     <hr class="term-divider">
 
@@ -464,13 +471,15 @@
     <!-- 7 -->
     <div class="term-section" id="s7">
         <h2><span class="sec-num">07</span> Privacidade e Proteção de Dados (LGPD)</h2>
-        <p>A FrancoTrades trata os dados pessoais dos usuários em conformidade com a <strong>Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 – LGPD)</strong>. Os dados coletados durante a compra e utilização dos serviços são utilizados exclusivamente para:</p>
+        <p>A FrancoTrades trata dados pessoais para finalidades relacionadas à contratação e execução dos serviços, segurança e autenticação, suporte, comunicações operacionais, pagamentos, prevenção a fraudes e cumprimento de obrigações legais, utilizando as bases legais aplicáveis a cada operação de tratamento.</p>
         <ul>
-            <li>Processamento e gestão do acesso aos produtos adquiridos</li>
-            <li>Comunicações relacionadas ao serviço contratado</li>
-            <li>Cumprimento de obrigações legais</li>
+            <li>Gestão de cadastro, acesso e progresso na Área do Aluno</li>
+            <li>Comunicações sobre aulas, pagamentos, suporte e funcionamento do serviço</li>
+            <li>Processamento de pagamentos e manutenção de registros necessários</li>
+            <li>Segurança, prevenção a abuso e cumprimento de obrigações legais ou regulatórias</li>
         </ul>
-        <p>Seus dados não serão vendidos ou compartilhados com terceiros para fins comerciais sem seu consentimento expresso. Você tem o direito de solicitar acesso, correção, eliminação ou portabilidade dos seus dados a qualquer momento pelo e-mail <strong>francotradesusa@gmail.com</strong>.</p>
+        <p>Para viabilizar os serviços, dados podem ser tratados por fornecedores de infraestrutura, autenticação, hospedagem, e-mail, pagamentos, armazenamento, videoconferência e vídeo. Alguns desses fornecedores podem realizar tratamento fora do Brasil; quando houver transferência internacional de dados, serão observadas as exigências da LGPD e da regulamentação da ANPD aplicável.</p>
+        <p>Nos termos da LGPD, o titular pode, conforme o caso, solicitar confirmação e acesso aos dados, correção, informações sobre compartilhamento, anonimização, bloqueio ou eliminação de dados tratados em desconformidade, portabilidade nos termos da regulamentação, revogação de consentimento e eliminação dos dados tratados com base em consentimento, ressalvadas as hipóteses legais de conservação. Solicitações podem ser encaminhadas para <strong>francotradesusa@gmail.com</strong>.</p>
     </div>
     <hr class="term-divider">
 
@@ -478,7 +487,7 @@
     <div class="term-section" id="s8">
         <h2><span class="sec-num">08</span> Alterações nos Termos de Uso</h2>
         <p>A FrancoTrades reserva-se o direito de atualizar ou modificar estes Termos de Uso a qualquer momento. As alterações entrarão em vigor a partir da data de publicação nesta página.</p>
-        <p>Em caso de alterações relevantes que afetem direitos do consumidor, nos comprometemos a comunicar os usuários com acesso ativo pelo e-mail cadastrado, com antecedência mínima de 10 dias. O uso contínuo dos serviços após a comunicação implica na <strong>aceitação das novas condições</strong>.</p>
+        <p>Alterações relevantes serão comunicadas aos usuários com acesso ativo pelos canais disponíveis. Mudanças não serão aplicadas retroativamente para reduzir direitos já adquiridos ou modificar de forma desfavorável condições essenciais de contratação já concluída, salvo quando exigidas por lei. Quando a legislação exigir consentimento ou nova aceitação, ela será solicitada de forma específica.</p>
     </div>
     <hr class="term-divider">
 
@@ -492,7 +501,7 @@
             <strong>consumidor.gov.br:</strong> plataforma online de resolução de conflitos do Ministério da Justiça<br>
             <strong>ANPD:</strong> Autoridade Nacional de Proteção de Dados, para questões relacionadas à LGPD
         </div>
-        <p>A eleição do foro brasileiro não impede que a FrancoTrades, quando na posição de autora, acione tribunais de outras jurisdições para proteção de seus direitos de propriedade intelectual ou recuperação de créditos.</p>
+        <p>As regras de competência territorial e internacional previstas em lei permanecem preservadas. Nenhuma cláusula destes Termos será interpretada para impor ao consumidor brasileiro foro estrangeiro ou afastar competência legalmente assegurada.</p>
     </div>
     <hr class="term-divider">
 
@@ -512,12 +521,13 @@
             <strong>E-mail:</strong> francotradesusa@gmail.com<br>
             <strong>WhatsApp:</strong> +55 22 981448874
         </div>
-        <p>Para exercer o direito de arrependimento ou solicitar cancelamento, informe: nome completo, produto adquirido, data da compra e meio de pagamento utilizado. O prazo de resposta é de até 2 dias úteis.</p>
+        <p>Para exercer o direito de arrependimento ou solicitar cancelamento, informe, sempre que possível: nome completo, produto adquirido, data da compra e meio de pagamento utilizado. O recebimento será confirmado e a manifestação será respondida em até 5 dias, sem prejuízo de prazos legais específicos.</p>
     </div>
+</div>
 
 <!-- FOOTER -->
 <div class="terms-footer">
-    <p>© 2025 FrancoTrades. Todos os direitos reservados.</p>
+    <p>© 2026 FrancoTrades. Todos os direitos reservados.</p>
     <div class="contact-row">
         <a href="mailto:francotradesusa@gmail.com"><i class="fas fa-envelope"></i> francotradesusa@gmail.com</a>
         <a href="https://wa.me/5522981448874"><i class="fab fa-whatsapp"></i> +55 22 981448874</a>
@@ -525,7 +535,7 @@
     <a href="https://francotrades.github.io/mentoria-individual/" class="back-btn">
         <i class="fas fa-arrow-left"></i> Voltar para a Mentoria
     </a>
-    <div class="update-date">Última atualização: Junho 2026 · v3.0 · Adequado ao CDC e LGPD</div>
+    <div class="update-date">Última atualização: Setembro 2026 · v4.0 · CDC, comércio eletrônico e LGPD</div>
 </div>
 
 <!-- WHATSAPP FLOAT -->
